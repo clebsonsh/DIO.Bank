@@ -20,7 +20,7 @@ namespace DIO.Bank
     {
       this.Balance += amountToDeposit;
 
-      Console.WriteLine("Account current balance: {0}", this.Balance);
+      Console.WriteLine("{0}'s Account current balance: {1}", this.Customer, this.Balance);
     }
 
 		public bool Withdraw(double amountToWithdraw)
@@ -33,10 +33,18 @@ namespace DIO.Bank
 
       this.Balance -= amountToWithdraw;
 
-      Console.WriteLine("Account current balance: {0}", this.Balance);
+      Console.WriteLine("{0}'s Account current balance: {1}", this.Customer, this.Balance);
 
       return true;
 		}
+
+    public void Transfer(double amountToTransfer, Account destinationAccount)
+    {
+      if (this.Withdraw(amountToTransfer))
+      {
+        destinationAccount.Deposit(amountToTransfer);
+      }
+    }
 
 		public override string ToString()
 		{

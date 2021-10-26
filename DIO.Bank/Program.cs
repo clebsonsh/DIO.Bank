@@ -97,7 +97,17 @@ namespace DIO.Bank
 
 		private static void Transfer()
 		{
-			throw new NotImplementedException();
+      Console.Write("Enter account number that is sending money: ");
+      int indexSendingAccount = int.Parse(Console.ReadLine());
+
+      Console.Write("Enter account number that is receiving money: ");
+      int indexReceivingAccount = int.Parse(Console.ReadLine());
+
+      Console.Write("Enter amount to transfer: ");
+      double amountToTransfer = double.Parse(Console.ReadLine());
+
+      accountsList[indexSendingAccount]
+          .Transfer(amountToTransfer, accountsList[indexReceivingAccount]);
 		}
 
 		private static string GetUserChoice()
