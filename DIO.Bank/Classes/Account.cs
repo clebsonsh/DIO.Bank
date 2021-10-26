@@ -15,5 +15,12 @@ namespace DIO.Bank
 
         // Methods
         // To do...
+
+        public override string ToString()
+        {
+            string accountString  = "Customer Name: " + this.Customer + " | ";
+            accountString += "Balance: " + this.Balance;
+            return accountString;
+        }
     }
 }
