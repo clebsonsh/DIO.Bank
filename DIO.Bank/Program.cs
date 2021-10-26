@@ -33,7 +33,7 @@ namespace DIO.Bank
             Transfer();
             break;
           default:
-            Console.WriteLine("Please select a valid opton...");
+            Console.WriteLine("Please select a valid option...");
             break;
         }
 
@@ -60,12 +60,12 @@ namespace DIO.Bank
 
 		private static void MakeNewAccount()
 		{
-      Console.WriteLine("Let make a new account..");
+      Console.WriteLine("Let's make a new account..");
 
       Console.Write("Customer Customer: ");
       string customer = Console.ReadLine();
 
-      Console.Write("Initual Balance: ");
+      Console.Write("Initial Balance: ");
       double balance = double.Parse(Console.ReadLine());
 
       Account newAccount = new Account(customer: customer, balance: balance);
@@ -78,7 +78,7 @@ namespace DIO.Bank
       Console.Write("Enter account number to deposit: ");
       int accountIndex = int.Parse(Console.ReadLine());
 
-      Console.Write("Enter the amount to deposit: ");
+      Console.Write("Enter amount to deposit: ");
       double amountToDeposit = double.Parse(Console.ReadLine());
 
       accountsList[accountIndex].Deposit(amountToDeposit);
@@ -89,7 +89,7 @@ namespace DIO.Bank
       Console.Write("Enter account number to withdraw: ");
       int accountIndex = int.Parse(Console.ReadLine());
 
-      Console.Write("Enter the amount to withdraw: ");
+      Console.Write("Enter amount to withdraw: ");
       double amountToWithdraw = double.Parse(Console.ReadLine());
 
       accountsList[accountIndex].Withdraw(amountToWithdraw);
