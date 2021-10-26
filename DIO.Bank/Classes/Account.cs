@@ -3,13 +3,13 @@ namespace DIO.Bank
     public class Account
     {
         //Attributes
-        private string Name { get; set; }
+        private string Customer { get; set; }
         private double Balance { get; set; }
 
         // Constructor
-        public Account(string name, double balance)
+        public Account(string customer, double balance)
         {
-            this.Name = name;
+            this.Customer = customer;
             this.Balance = balance;
         }
 
