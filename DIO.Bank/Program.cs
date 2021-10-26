@@ -60,7 +60,17 @@ namespace DIO.Bank
 
 		private static void MakeNewAccount()
 		{
-			throw new NotImplementedException();
+      Console.WriteLine("Let make a new account..");
+
+      Console.Write("Customer Customer: ");
+      string customer = Console.ReadLine();
+
+      Console.Write("Initual Balance: ");
+      double balance = double.Parse(Console.ReadLine());
+
+      Account newAccount = new Account(customer: customer, balance: balance);
+
+      accountsList.Add(newAccount);
 		}
 
 		private static void Deposit()
@@ -80,10 +90,9 @@ namespace DIO.Bank
 
 		private static string GetUserChoice()
     {
-      Console.WriteLine(@"
+      Console.Write(@"
       ##############################
       Welcome to DIO Bank!
-      Please select a option:
 
       1 - Show all accounts
       2 - Make a new account
@@ -93,7 +102,8 @@ namespace DIO.Bank
       X - Quit
 
       ##############################
-      ");
+
+      Please select a option: ");
 
       string userChoice = Console.ReadLine().ToUpper();
       Console.WriteLine();
