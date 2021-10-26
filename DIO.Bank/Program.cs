@@ -75,7 +75,13 @@ namespace DIO.Bank
 
 		private static void Deposit()
 		{
-			throw new NotImplementedException();
+      Console.Write("Enter account number to deposit: ");
+      int accountIndex = int.Parse(Console.ReadLine());
+
+      Console.Write("Enter the amount to deposit: ");
+      double amountToDeposit = double.Parse(Console.ReadLine());
+
+      accountsList[accountIndex].Deposit(amountToDeposit);
 		}
 
 		private static void Withdraw()

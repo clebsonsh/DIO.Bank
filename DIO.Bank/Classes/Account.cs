@@ -16,11 +16,19 @@ namespace DIO.Bank
 		}
 
 		// Methods
+    public void Deposit(double amountToDeposit)
+    {
+      this.Balance += amountToDeposit;
+
+      Console.WriteLine("Account current balance: {0}", this.Balance);
+    }
+
 		public bool Withdraw(double amountToWithdraw)
 		{
 			if (this.Balance - amountToWithdraw < 0)
 			{
 				Console.WriteLine("Not enought balance to withdraw...");
+        return false;
 			}
 
       this.Balance -= amountToWithdraw;
