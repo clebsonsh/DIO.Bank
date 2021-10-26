@@ -80,7 +80,13 @@ namespace DIO.Bank
 
 		private static void Withdraw()
 		{
-			throw new NotImplementedException();
+      Console.Write("Enter account number to withdraw: ");
+      int accountIndex = int.Parse(Console.ReadLine());
+
+      Console.Write("Enter the amount to withdraw: ");
+      double amountToWithdraw = double.Parse(Console.ReadLine());
+
+      accountsList[accountIndex].Withdraw(amountToWithdraw);
 		}
 
 		private static void Transfer()
