@@ -43,8 +43,8 @@ namespace DIO.Bank
       Console.WriteLine("Come back later\n");
     }
 
-		private static void ShowAllAccounts()
-		{
+    private static void ShowAllAccounts()
+    {
       if (accountsList.Count == 0)
       {
         Console.WriteLine("There is no account in the system yet...");
@@ -56,10 +56,10 @@ namespace DIO.Bank
         Account account = accountsList[i];
         Console.WriteLine("#{0} - {1}", i, account);
       }
-		}
+    }
 
-		private static void MakeNewAccount()
-		{
+    private static void MakeNewAccount()
+    {
       Console.WriteLine("Let's make a new account..");
 
       Console.Write("Customer Customer: ");
@@ -71,10 +71,10 @@ namespace DIO.Bank
       Account newAccount = new Account(customer: customer, balance: balance);
 
       accountsList.Add(newAccount);
-		}
-
-		private static void Deposit()
-		{
+    }
+    
+    private static void Deposit()
+    {
       Console.Write("Enter account number to deposit: ");
       int accountIndex = int.Parse(Console.ReadLine());
 
@@ -82,10 +82,10 @@ namespace DIO.Bank
       double amountToDeposit = double.Parse(Console.ReadLine());
 
       accountsList[accountIndex].Deposit(amountToDeposit);
-		}
+    }
 
-		private static void Withdraw()
-		{
+    private static void Withdraw()
+    {
       Console.Write("Enter account number to withdraw: ");
       int accountIndex = int.Parse(Console.ReadLine());
 
@@ -93,10 +93,10 @@ namespace DIO.Bank
       double amountToWithdraw = double.Parse(Console.ReadLine());
 
       accountsList[accountIndex].Withdraw(amountToWithdraw);
-		}
+    }
 
-		private static void Transfer()
-		{
+    private static void Transfer()
+    {
       Console.Write("Enter account number that is sending money: ");
       int indexSendingAccount = int.Parse(Console.ReadLine());
 
@@ -108,9 +108,9 @@ namespace DIO.Bank
 
       accountsList[indexSendingAccount]
           .Transfer(amountToTransfer, accountsList[indexReceivingAccount]);
-		}
+    }
 
-		private static string GetUserChoice()
+    private static string GetUserChoice()
     {
       Console.Write(@"
       ##############################
