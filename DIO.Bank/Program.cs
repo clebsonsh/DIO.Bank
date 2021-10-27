@@ -62,7 +62,7 @@ namespace DIO.Bank
     {
       Console.WriteLine("Let's make a new account..");
 
-      Console.Write("Customer Customer: ");
+      Console.Write("Customer Name: ");
       string customer = Console.ReadLine();
 
       Console.Write("Initial Balance: ");
